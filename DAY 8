@@ -1,1 +1,230 @@
+1
+//   I/p                      O/p
+//    5  
+//  13 65 78 21 9           13 65 78 21 9
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int arr[] = new int[n];
+        int i;
+        for(i=0;i<n;i++)
+        arr[i]=sc.nextInt();
+        for(i=0;i<n;i++)
+        System.out.print(arr[i]+" ");
+    }
+}
 
+2
+// WRITE THE JAVA PROGRAM TO FIND THE SUM OF ARRAY  ELEMENTS
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt(); // 5
+        int arr[] = new int[n]; // 1 10 2 5 3
+        int i,sum=0;
+        for(i=0;i<n;i++){
+        arr[i]=sc.nextInt();
+        sum=sum+arr[i];
+        }
+        System.out.print("Sum of Array Elements: " + sum);
+    }
+}
+
+3
+// WRITE THE JAVA PROGRAM TO FIND THE ODD, EVEN ELEMENT COUNT IN THE GIVEN ARRAY
+//   I/P                    O/p
+//    5
+//  10 2 34 5 23         Odd Element Count: 2
+//                       Even Element Count: 3
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int arr[] = new int[n]; 
+        int i,ec=0,oc=0;
+        for(i=0;i<n;i++){
+        arr[i]=sc.nextInt();
+        if(arr[i]%2==0)
+            ec++;
+        else
+            oc++;
+        }
+        System.out.println("Even Elements Count:  " + ec++);
+        System.out.println("Odd Elements Count: " + oc++);
+    }
+}
+
+4
+// WRITE THE JAVA PROGRAM TO REPLACE THE VALUE IN THE ARRAY WITH NEW VALUE
+//   I/P                    O/p
+//    5
+//  10 20 30 40 50        10 20 30 100 50
+//  ind=30
+//  value=100
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int arr[] = new int[n]; 
+        int i;
+        for(i=0;i<n;i++)
+        arr[i]=sc.nextInt();
+        int ind = sc.nextInt();
+        int val = sc.nextInt();
+        arr[ind] = val;
+        for(i=0;i<n;i++)
+        System.out.print(arr[i] + " ");
+    }
+}
+
+5
+// LINEAR SEARCH
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int arr[] = new int[n]; 
+        int i,flag=0;
+        for(i=0;i<n;i++)
+        arr[i]=sc.nextInt();
+        int t = sc.nextInt();
+        for(i=0;i<n;i++){
+            if(arr[i]==t){
+                flag=1;
+                System.out.print("Present");
+            }
+        }
+        if(flag==0)
+        System.out.print("Not present");
+    }
+}
+
+6
+//   I/P                      O/P 
+//   5                     50 40 30 20 10
+//  10 20 30 40 50   
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int arr[] = new int[n]; 
+        int i;
+        for(i=0;i<n;i++)
+        arr[i]=sc.nextInt();
+        for(i=n-1;i>=0;i--)
+        System.out.print(arr[i] + " ");
+    }
+}
+
+7
+//  IMPLACE METHOD
+//   I/P                      O/P 
+//   5                     50 40 30 20 10
+//  10 20 30 40 50   
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int arr[] = new int[n]; 
+        int i;
+        for(i=0;i<n;i++)
+        arr[i]=sc.nextInt();
+        int s = 0;
+        int e = n-1;
+        while(s<e){
+            int temp=arr[s];
+            arr[s]=arr[e];
+            arr[e]=temp;
+            s++;
+            e--;
+        }
+        for(i=0;i<n;i++)
+        System.out.print(arr[i] + " ");
+    }
+}
+
+8
+// WRITE THE JAVA PROGRAM TO COPY ONE ARRAY INTO ANOTHER ARRAY
+// I/P                    O/P
+// 5
+// 10 20 30 40 50         10 20 30 40 50
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int arr1[] = new int[n];
+        int arr2[] = new int[n];
+        int i;
+        for(i = 0; i < n; i++)
+            arr1[i] = sc.nextInt();
+        for(i = 0; i < n; i++)
+            arr2[i] = arr1[i];
+        for(i = 0; i < n; i++)
+            System.out.print(arr2[i] + " ");
+    }
+}
+
+9
+// WRITE THE JAVA PROGRAM TO PRINT POSITIVE AND NEGATIVE ELEMENTS
+// I/P                    O/P
+// 6
+// 10 -20 30 -40 50 -60
+// Positive: 10 30 50
+// Negative: -20 -40 -60
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int arr[] = new int[n];
+        int i;
+        for(i = 0; i < n; i++)
+            arr[i] = sc.nextInt();
+        System.out.print("Positive: ");
+        for(i = 0; i < n; i++) {
+            if(arr[i] > 0)
+                System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+        System.out.print("Negative: ");
+        for(i = 0; i < n; i++) {
+            if(arr[i] < 0)
+                System.out.print(arr[i] + " ");
+        }
+    }
+}
+
+10
+// WRITE THE JAVA PROGRAM TO FIND THE SUM OF POSITIVE AND NEGATIVE ELEMENTS
+// I/P                    O/P
+// 6
+// 10 -20 30 -40 50 -60
+// Positive Sum: 90
+// Negative Sum: -120
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int arr[] = new int[n];
+        int i, psum = 0, nsum = 0;
+        for(i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+            if(arr[i] > 0)
+                psum = psum + arr[i];
+            else
+                nsum = nsum + arr[i];
+        }
+        System.out.println("Positive Sum: " + psum);
+        System.out.println("Negative Sum: " + nsum);
+    }
+}
