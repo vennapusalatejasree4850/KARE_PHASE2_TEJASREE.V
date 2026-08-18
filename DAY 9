@@ -1,1 +1,259 @@
+1
+// SINGLE NUMBER
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int arr[] = new int[n];
+        int m = 0;
+        for(int i=0;i<n;i++){
+            arr[i] = sc.nextInt();
+            m = m ^ arr[i];
+        }
+        System.out.print("Single Number: " + m);
+    }
+}
 
+2
+// MISSING NUMBER
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int arr[] = new int[n];
+        int sum = 0;
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+            sum += arr[i];
+        }
+        int sumn = (n + 1) * (n + 2) / 2;
+        System.out.println("Missing Number: " + (sumn - sum));
+    }
+}
+
+3
+// Arranging 0 and 1 in line
+// i/p                    o/p
+//  5
+// 0 1 0 1 0            0 0 0 1 1
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int arr[] = new int[n];
+        int i,zc=0;
+        for(i=0;i<n;i++){
+            arr[i] = sc.nextInt();
+            if(arr[i]==0)
+            zc++;
+        }
+        for(i = 0; i < zc; i++)
+        arr[i] = 0;
+        for(i = zc; i < n; i++)
+        arr[i] = 1;
+        for(i = 0; i < n; i++)
+        System.out.print(arr[i] + " ");
+    }
+}
+
+4
+// Arranging 0,1,2 in line
+// i/p                      o/p
+//  6
+// 0 1 2 0 1 0            0 0 0 1 1 2 
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int arr[] = new int[n];
+        int i,zc=0,oc=0;
+        for(i=0;i<n;i++){
+            arr[i] = sc.nextInt();
+            if(arr[i]==0)
+            zc++;
+            else if(arr[i]==1)
+            oc++;
+        }
+        for(i = 0; i < zc; i++)
+        arr[i] = 0;
+        for(i = zc; i < zc+oc; i++)
+        arr[i] = 1;
+        for(i = zc+oc; i < n; i++)
+        arr[i] = 2;
+        for(i = 0; i < n; i++)
+        System.out.print(arr[i] + " ");
+    }
+}
+
+5
+// Running sum of array elements
+// i/p                      o/p
+//  5
+// 1 2 3 4 5              1 3    6     10       15
+//                        1 1+2 1+2+3 1+2+3+4  1+2+3+4+5
+//                        1 3    3+3    6+4      10+5
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int arr[] = new int[n];
+        int i;
+        for(i=0;i<n;i++)
+        arr[i]=sc.nextInt();
+        for(i=1;i<n;i++)
+        arr[i]=arr[i] + arr[i-1];
+        for(i=0;i<n;i++)
+        System.out.print(arr[i] + " ");
+    }
+}
+
+6
+// To find the maximum value
+// i/p                      o/p
+//  5
+// 1 45 34 67 54             67
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int arr[] = new int[n];
+        int i;
+        for(i=0;i<n;i++)
+        arr[i]=sc.nextInt();
+        int  max = Integer.MIN_VALUE;
+        for(i=0;i<n;i++){
+            if(arr[i]>max)
+            max=arr[i];
+        }
+        System.out.print("MAXIMUM ELEMENT: " + max);
+    }
+}
+
+7
+// To find the miniimum value
+// i/p                      o/p
+//  5
+// 1 45 34 67 54             1
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int arr[] = new int[n];
+        int i;
+        for(i=0;i<n;i++)
+        arr[i]=sc.nextInt();
+        int  min = Integer.MAX_VALUE;
+        for(i=0;i<n;i++){
+            if(arr[i]<min)
+            min=arr[i];
+        }
+        System.out.print("MINIMUM ELEMENT: " + min);
+    }
+}
+
+8
+// To find the second maximum value
+// i/p                      o/p
+//  5
+// 10 20 50 25 60            50
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int arr[] = new int[n];
+        int i,max,smax;
+        for(i=0;i<n;i++)
+        arr[i]=sc.nextInt();
+        if(arr[0]>arr[1]){
+            max = arr[0];
+            smax = arr[1];
+        }
+        else{
+            max = arr[1];
+            smax = arr[0];
+        }
+        for(i=2;i<n;i++){
+            if(arr[i]>max){
+                smax = max;
+                max = arr[i];
+            }
+            else if(arr[i]>smax && arr[i]<max){
+                smax = arr[i];
+            }
+        }
+        System.out.print(smax);
+    }
+}
+
+9
+// To find the second minimum value
+// i/p                      o/p
+//  5
+// 10 20 5 25 15             10
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int arr[] = new int[n];
+        int i, min, smin;
+        for(i = 0; i < n; i++)
+            arr[i] = sc.nextInt();
+        if(arr[0] < arr[1]) {
+            min = arr[0];
+            smin = arr[1];
+        }
+        else {
+            min = arr[1];
+            smin = arr[0];
+        }
+        for(i = 2; i < n; i++) {
+            if(arr[i] < min) {
+                smin = min;
+                min = arr[i];
+            }
+            else if(arr[i] < smin && arr[i] > min) {
+                smin = arr[i];
+            }
+        }
+        System.out.print("SECOND MINIMUM ELEMENT: " + smin);
+    }
+}
+
+10
+// To count positive, negative and zero elements
+// i/p                      o/p
+//  7
+// 10 -5 0 20 -8 0 15
+// Positive: 3
+// Negative: 2
+// Zero: 2
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int arr[] = new int[n];
+        int i, pc = 0, nc = 0, zc = 0;
+        for(i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+            if(arr[i] > 0)
+                pc++;
+            else if(arr[i] < 0)
+                nc++;
+            else
+                zc++;
+        }
+        System.out.println("Positive: " + pc);
+        System.out.println("Negative: " + nc);
+        System.out.println("Zero: " + zc);
+    }
+}
