@@ -1,0 +1,184 @@
+1
+//write a java programe to fine the nth term if fibinocci series by using recursion
+import java.util.*;
+public class Main {
+        static int fib(int n){
+            if(n<=1)
+                return n;
+            return fib(n-1)+fib(n-2);
+        }
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int ans=fib(n);  
+        System.out.println(ans);
+
+    }
+}
+
+2
+//NO argument Constructor
+import java.util.*;
+public class Main {
+        Main(){
+            System.out.println("Main is started");
+        }
+    public static void main(String[] args) {
+        Main obj=new Main();
+
+    }
+}
+
+3
+// default Constructor
+import java.util.*;
+public class Main {
+        int rn;
+        String name;
+        Main(){
+            System.out.println(name+" "+rn);
+        }
+    public static void main(String[] args) {
+        Main obj=new Main();
+    }
+}
+
+4
+//parametrized Constructor
+import java.util.*;
+public class Main {
+        int rn;
+        String name;
+        Main(int r,String n){
+            this.rn=r;
+            this.name=n;
+        }
+        void display(){
+            System.out.println(rn+" "+name);
+        }
+    public static void main(String[] args) {
+        Main obj=new Main(39,"Reshma");
+        obj.display();
+    }
+}
+5
+//copy Constructor
+public class Main {
+        int rn;
+        String name;
+        Main(int r,String n){
+            this.rn=r;
+            this.name=n;
+        }
+        Main(Main obj){
+            obj.rn=25;
+        }
+        void display(){
+            System.out.println(rn+" "+name);
+        }
+    public static void main(String[] args) {
+        Main obj=new Main(39,"Reshma");
+        Main ob=new Main(obj);
+        obj.display();
+    }
+}
+
+6
+// CONSTRUCTOR OVERLOADING
+public class Main {
+    int a;
+    int b;
+    Main() {
+        a = 10;
+        b = 20;
+    }
+    Main(int x) {
+        a = x;
+        b = 30;
+    }
+    Main(int x, int y) {
+        a = x;
+        b = y;
+    }
+    void display() {
+        System.out.println(a + " " + b);
+    }
+    public static void main(String[] args) {
+        Main obj1 = new Main();
+        obj1.display();
+        Main obj2 = new Main(50);
+        obj2.display();
+        Main obj3 = new Main(60, 70);
+        obj3.display();
+    }
+}
+
+7
+// CONSTRUCTOR USING THIS KEYWORD
+public class Main {
+    int id;
+    String name;
+    Main(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+    void display() {
+        System.out.println(id + " " + name);
+    }
+    public static void main(String[] args) {
+        Main obj = new Main(101, "Reshma");
+        obj.display();
+    }
+}
+
+8
+// FIND FACTORIAL USING RECURSION
+import java.util.*;
+public class Main {
+    static int fact(int n) {
+        if(n == 0 || n == 1)
+            return 1;
+        return n * fact(n - 1);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int ans = fact(n);
+        System.out.println(ans);
+    }
+}
+
+9
+// FIND SUM OF N NATURAL NUMBERS USING RECURSION
+import java.util.*;
+public class Main {
+    static int sum(int n) {
+        if(n == 0)
+            return 0;
+        return n + sum(n - 1);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int ans = sum(n);
+        System.out.println(ans);
+    }
+}
+
+10
+// FIND POWER OF A NUMBER USING RECURSION
+import java.util.*;
+public class Main {
+    static int power(int b, int p) {
+        if(p == 0)
+            return 1;
+        return b * power(b, p - 1);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int b = sc.nextInt();
+        int p = sc.nextInt();
+        int ans = power(b, p);
+        System.out.println(ans);
+    }
+}
