@@ -1,0 +1,342 @@
+1
+public class HelloWorld
+{
+    public static void main(String[] args)
+    {
+        System.out.println("Hello, World!");
+        System.out.println("Welcome to Java Programming");
+    }
+}
+2
+public class StudentDetails
+{
+    public static void main(String[] args)
+    {
+        String name = "Karthick";
+        int age = 22;
+        char gender = 'M';
+        double marks = 85.5;
+        char grade = 'A';
+
+        System.out.println("Student Name : " + name);
+        System.out.println("Age          : " + age);
+        System.out.println("Gender       : " + gender);
+        System.out.println("Marks        : " + marks);
+        System.out.println("Grade        : " + grade);
+    }
+}
+3
+import java.util.Scanner;
+
+public class SumNumbers
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter N: ");
+        int n = sc.nextInt();
+
+        int i = 1;
+        int sum = 0;
+
+        while (i <= n)
+        {
+            sum = sum + i;
+            i++;
+        }
+
+        System.out.println("Sum = " + sum);
+
+        sc.close();
+    }
+}
+4
+import java.util.Scanner;
+
+public class LargestThree
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a: ");
+        int a = sc.nextInt();
+
+        System.out.print("Enter b: ");
+        int b = sc.nextInt();
+
+        System.out.print("Enter c: ");
+        int c = sc.nextInt();
+
+        if (a > b)
+        {
+            if (a > c)
+            {
+                System.out.println(a + " is largest");
+            }
+            else
+            {
+                System.out.println(c + " is largest");
+            }
+        }
+        else
+        {
+            if (b > c)
+            {
+                System.out.println(b + " is largest");
+            }
+            else
+            {
+                System.out.println(c + " is largest");
+            }
+        }
+
+        sc.close();
+    }
+}
+5
+import java.util.Scanner;
+
+public class StudentGrade
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter mark: ");
+        int mark = sc.nextInt();
+
+        if (mark < 0 || mark > 100)
+        {
+            System.out.println("Invalid mark");
+        }
+        else if (mark >= 90)
+        {
+            System.out.println("Grade: A");
+        }
+        else if (mark >= 80)
+        {
+            System.out.println("Grade: B");
+        }
+        else if (mark >= 70)
+        {
+            System.out.println("Grade: C");
+        }
+        else if (mark >= 60)
+        {
+            System.out.println("Grade: D");
+        }
+        else
+        {
+            System.out.println("Grade: F");
+        }
+
+        sc.close();
+    }
+}
+6
+import java.util.Scanner;
+
+public class ATM
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+
+        double balance = 10000;
+
+        System.out.println("Current Balance: ₹" + balance);
+
+        System.out.print("Enter withdrawal amount: ");
+        double amount = sc.nextDouble();
+
+        if (amount <= 0)
+        {
+            System.out.println("Invalid withdrawal amount");
+        }
+        else if (amount > balance)
+        {
+            System.out.println("Insufficient balance");
+        }
+        else
+        {
+            balance = balance - amount;
+
+            System.out.println("Withdrawal successful");
+            System.out.println("Remaining balance: ₹" + balance);
+        }
+
+        sc.close();
+    }
+}
+7
+import java.util.Scanner;
+
+public class ElectricityBill
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter units: ");
+        int units = sc.nextInt();
+
+        double bill;
+
+        if (units <= 100)
+        {
+            bill = units * 2;
+        }
+        else if (units <= 200)
+        {
+            bill = (100 * 2) + ((units - 100) * 3);
+        }
+        else
+        {
+            bill = (100 * 2) + (100 * 3) + ((units - 200) * 5);
+        }
+
+        System.out.println("Electricity Bill: ₹" + bill);
+
+        sc.close();
+    }
+}
+8
+import java.util.Scanner;
+
+public class Calculator
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter first number: ");
+        double a = sc.nextDouble();
+
+        System.out.print("Enter second number: ");
+        double b = sc.nextDouble();
+
+        System.out.print("Enter operator (+, -, *, /, %): ");
+        char operator = sc.next().charAt(0);
+
+        switch (operator)
+        {
+            case '+':
+                System.out.println("Result = " + (a + b));
+                break;
+
+            case '-':
+                System.out.println("Result = " + (a - b));
+                break;
+
+            case '*':
+                System.out.println("Result = " + (a * b));
+                break;
+
+            case '/':
+                if (b != 0)
+                {
+                    System.out.println("Result = " + (a / b));
+                }
+                else
+                {
+                    System.out.println("Cannot divide by zero");
+                }
+                break;
+
+            case '%':
+                if (b != 0)
+                {
+                    System.out.println("Result = " + (a % b));
+                }
+                else
+                {
+                    System.out.println("Cannot divide by zero");
+                }
+                break;
+
+            default:
+                System.out.println("Invalid operator");
+        }
+
+        sc.close();
+    }
+}
+9
+import java.util.Scanner;
+
+public class RestaurantMenu
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("----- RESTAURANT MENU -----");
+        System.out.println("1. Idly  - ₹30");
+        System.out.println("2. Dosa  - ₹50");
+        System.out.println("3. Poori - ₹40");
+        System.out.println("4. Meals - ₹100");
+        System.out.println("5. Exit");
+
+        System.out.print("Enter your choice: ");
+        int choice = sc.nextInt();
+
+        switch (choice)
+        {
+            case 1:
+                System.out.println("You selected Idly");
+                System.out.println("Price: ₹30");
+                break;
+
+            case 2:
+                System.out.println("You selected Dosa");
+                System.out.println("Price: ₹50");
+                break;
+
+            case 3:
+                System.out.println("You selected Poori");
+                System.out.println("Price: ₹40");
+                break;
+
+            case 4:
+                System.out.println("You selected Meals");
+                System.out.println("Price: ₹100");
+                break;
+
+            case 5:
+                System.out.println("Thank you!");
+                break;
+
+            default:
+                System.out.println("Invalid choice");
+        }
+
+        sc.close();
+    }
+}
+10
+import java.util.Scanner;
+
+public class NumberPattern
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter number of rows: ");
+        int rows = sc.nextInt();
+
+        for (int i = 1; i <= rows; i++)
+        {
+            for (int j = 1; j <= i; j++)
+            {
+                System.out.print(j);
+            }
+
+            System.out.println();
+        }
+
+        sc.close();
+    }
+}
