@@ -1,0 +1,307 @@
+1
+import java.util.Scanner;
+
+public class StarTriangle
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter rows: ");
+        int rows = sc.nextInt();
+
+        for (int i = 1; i <= rows; i++)
+        {
+            for (int j = 1; j <= i; j++)
+            {
+                System.out.print("*");
+            }
+
+            System.out.println();
+        }
+
+        sc.close();
+    }
+}
+2
+import java.util.Scanner;
+
+public class InvertedStarTriangle
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter rows: ");
+        int rows = sc.nextInt();
+
+        for (int i = rows; i >= 1; i--)
+        {
+            for (int j = 1; j <= i; j++)
+            {
+                System.out.print("*");
+            }
+
+            System.out.println();
+        }
+
+        sc.close();
+    }
+}
+3
+import java.util.Scanner;
+
+public class RightAlignedTriangle
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter rows: ");
+        int rows = sc.nextInt();
+
+        for (int i = 1; i <= rows; i++)
+        {
+            // Print spaces
+            for (int j = 1; j <= rows - i; j++)
+            {
+                System.out.print(" ");
+            }
+
+            // Print stars
+            for (int j = 1; j <= i; j++)
+            {
+                System.out.print("*");
+            }
+
+            System.out.println();
+        }
+
+        sc.close();
+    }
+}
+4
+import java.util.Scanner;
+
+public class PyramidPattern
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter rows: ");
+        int rows = sc.nextInt();
+
+        for (int i = 1; i <= rows; i++)
+        {
+            // Spaces
+            for (int j = 1; j <= rows - i; j++)
+            {
+                System.out.print(" ");
+            }
+
+            // Stars
+            for (int j = 1; j <= (2 * i - 1); j++)
+            {
+                System.out.print("*");
+            }
+
+            System.out.println();
+        }
+
+        sc.close();
+    }
+}
+5
+import java.util.Scanner;
+
+public class InvertedPyramid
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter rows: ");
+        int rows = sc.nextInt();
+
+        for (int i = rows; i >= 1; i--)
+        {
+            for (int j = 1; j <= rows - i; j++)
+            {
+                System.out.print(" ");
+            }
+
+
+            for (int j = 1; j <= (2 * i - 1); j++)
+            {
+                System.out.print("*");
+            }
+
+            System.out.println();
+        }
+
+        sc.close();
+    }
+}
+6
+import java.util.Scanner;
+
+public class NumberTriangle
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter rows: ");
+        int rows = sc.nextInt();
+
+        for (int i = 1; i <= rows; i++)
+        {
+            for (int j = 1; j <= i; j++)
+            {
+                System.out.print(j);
+            }
+
+            System.out.println();
+        }
+
+        sc.close();
+    }
+}
+7
+import java.util.Scanner;
+
+public class RepeatedNumberTriangle
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter rows: ");
+        int rows = sc.nextInt();
+
+        for (int i = 1; i <= rows; i++)
+        {
+            for (int j = 1; j <= i; j++)
+            {
+                System.out.print(i);
+            }
+
+            System.out.println();
+        }
+
+        sc.close();
+    }
+}
+8
+import java.util.Scanner;
+
+public class FloydTriangle
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter rows: ");
+        int rows = sc.nextInt();
+
+        int number = 1;
+
+        for (int i = 1; i <= rows; i++)
+        {
+            for (int j = 1; j <= i; j++)
+            {
+                System.out.print(number + " ");
+                number++;
+            }
+
+            System.out.println();
+        }
+
+        sc.close();
+    }
+}
+9
+import java.util.Scanner;
+
+public class DiamondPattern
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter rows: ");
+        int rows = sc.nextInt();
+
+        // Upper half
+        for (int i = 1; i <= rows; i++)
+        {
+            // Spaces
+            for (int j = 1; j <= rows - i; j++)
+            {
+                System.out.print(" ");
+            }
+
+            // Stars
+            for (int j = 1; j <= (2 * i - 1); j++)
+            {
+                System.out.print("*");
+            }
+
+            System.out.println();
+        }
+
+        // Lower half
+        for (int i = rows - 1; i >= 1; i--)
+        {
+            // Spaces
+            for (int j = 1; j <= rows - i; j++)
+            {
+                System.out.print(" ");
+            }
+
+            // Stars
+            for (int j = 1; j <= (2 * i - 1); j++)
+            {
+                System.out.print("*");
+            }
+
+            System.out.println();
+        }
+
+        sc.close();
+    }
+}
+
+10
+import java.util.Scanner;
+
+public class NumberPyramid
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter rows: ");
+        int rows = sc.nextInt();
+
+        for (int i = 1; i <= rows; i++)
+        {
+            // Spaces
+            for (int j = 1; j <= rows - i; j++)
+            {
+                System.out.print(" ");
+            }
+
+            // Numbers
+            for (int j = 1; j <= (2 * i - 1); j++)
+            {
+                System.out.print(j);
+            }
+
+            System.out.println();
+        }
+
+        sc.close();
+    }
+}
