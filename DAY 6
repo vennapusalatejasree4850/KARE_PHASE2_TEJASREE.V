@@ -1,1 +1,189 @@
+1
+// Write a java program to count the no.of.digits in the given Number
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int c=0;
+        while(n!=0){
+            n=n/10;
+            c++;
+        }
+        System.out.print("No of digits: " + c);
+    }
+}
 
+2
+// Write a java program t0 reverrse the given digits using right side formation
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int d,ans=0;
+        while(n!=0){
+            d=n%10;
+            ans=ans*10+d;
+            n=n/10;
+        }
+        System.out.print("Reverse Number: " + ans);
+    }
+}
+
+3
+// Write a java program t0 count the odd,even digits in the given number
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int ec=0,oc=0,d;
+        while(n!=0){
+            d=n%10;
+            if(d%2==0)
+            ec++;
+            else
+            oc++;
+            n=n/10;
+        }
+        System.out.print("Odd digit count: " + oc);
+        System.out.print("Even digit count: " + ec);
+    }
+}
+
+4
+// Write a java program to count the prime digits in the given number
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int d,c=0;
+        while(n!=0){
+            d=n%10;
+            if(d==2||d==3||d==5||d==7)
+            c++;
+            n=n/10;
+        }
+        System.out.print("Prime Number: " + c);
+    }
+}
+
+5
+// Write a java program to reverse the given number without using right side formation
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int d,c=0;
+        while(n!=0){
+            d=n%10;
+            System.out.print(d);
+            n=n/10;
+        }
+    }
+}
+
+6
+// Palindrome Number
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int d,temp=n,rev=0;
+        while(n!=0){
+            d=n%10;
+            rev=rev*10+d;
+            n=n/10;
+        }
+        if(temp==rev)
+        System.out.print("Palindrome Number");
+        else
+        System.out.print("Not a palindrome number");
+    }
+}
+
+7
+// HARSHAD NUMBER
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int temp = n;
+        int sum = 0,d;
+        while(n!=0){
+            d=n%10;
+            sum=sum+d;
+            n=n/10;
+        }
+        if(temp%sum==0)
+        System.out.print("HARSHAD NUMBER");
+        else
+        System.out.print("NOT A HARSHAD NUMBER");
+    }
+}
+
+8
+// NEON NUMBER
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int square = n * n;
+        int sum = 0, d;
+        while (square != 0) {
+            d = square % 10;
+            sum = sum + d;
+            square = square / 10;
+        }
+        if (sum == n)
+            System.out.print("NEON NUMBER");
+        else
+            System.out.print("NOT A NEON NUMBER");
+    }
+}
+
+9
+// PERFECT NUMBER
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int sum=0,i;
+        for(i=1;i<=n/2;i++){
+            if(n%i==0)
+            sum=sum+i;
+        }
+        if (sum == n)
+            System.out.print("PERFECT NUMBER");
+        else
+            System.out.print("NOT A PERFECT NUMBER");
+    }
+}
+
+10
+// WRITE A JAVA PROGRAM TO FIND THE PRODUCT OF DIGITS IN THE GIVEN NUMBER
+// i/p                  o/p
+// 1234                 Product of digits: 24
+// 256                  Product of digits: 60
+// 105                  Product of digits: 0
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int d, product = 1;
+        while(n != 0) {
+            d = n % 10;
+            product = product * d;
+            n = n / 10;
+        }
+        System.out.print("Product of digits: " + product);
+    }
+}
