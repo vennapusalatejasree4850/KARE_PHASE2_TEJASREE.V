@@ -1,1 +1,246 @@
+1
+// INHERITANCE
+class Father{
+    void gen2(){
+        System.out.println("Gold");
+    }
+}
+class Son extends Father{
+    void gen3(){
+        System.out.println("Diamond");
+    }
+}
+class Main{
+    public static void main(String[] args){
+        Son obj = new Son();
+        Father f = new Father();
+        f.gen2();
+       // f.gen3();// not accessed
+       obj.gen3();
+       obj.gen2();
+    }
+}
 
+2
+// MULTI LEVEL INHERITANCE
+class Grandfather{
+    void gen1(){
+        System.out.println("Money");
+    }
+}
+class Father extends Grandfather{
+    void gen2(){
+        System.out.println("Gold");
+    }
+}
+class Son extends Father{
+    void gen3(){
+        System.out.println("Diamond");
+    }
+}
+class Main{
+    public static void main(String[] args){
+        Son s = new Son();
+        s.gen3();
+        s.gen2();
+        s.gen1();
+        Father f = new Father();
+        f.gen2();
+        f.gen1();
+        Grandfather g = new Grandfather();
+        g.gen1();
+    }
+}
+
+3
+// HIERARCHICAL INHERITANCE
+class Father{
+    void gen2(){
+        System.out.println("Gold");
+    }
+}
+class Son extends Father{
+    void gen31(){
+        System.out.println("Diamond");
+    }
+}
+class Daughter extends Father{
+    void gen32(){
+        System.out.println("Platinum");
+    }
+}
+class Main{
+    public static void main(String[] args){
+        Son s = new Son();
+        s.gen31();
+        s.gen2();
+        Daughter d = new Daughter();
+        d.gen32();
+        d.gen2();
+        Father f = new Father();
+        f.gen2();
+    }
+}
+
+4
+// SINGLE INHERITANCE
+class Animal {
+    void eat() {
+        System.out.println("Eating");
+    }
+}
+class Dog extends Animal {
+    void bark() {
+        System.out.println("Barking");
+    }
+}
+class Main {
+    public static void main(String[] args) {
+        Dog d = new Dog();
+        d.eat();
+        d.bark();
+    }
+}
+
+5
+// SINGLE INHERITANCE
+class Vehicle {
+    void start() {
+        System.out.println("Vehicle Started");
+    }
+}
+class Car extends Vehicle {
+    void drive() {
+        System.out.println("Car is Driving");
+    }
+}
+class Main {
+    public static void main(String[] args) {
+        Car c = new Car();
+        c.start();
+        c.drive();
+    }
+}
+
+6
+// MULTI LEVEL INHERITANCE
+class School {
+    void schoolName() {
+        System.out.println("ABC School");
+    }
+}
+class Student extends School {
+    void studentName() {
+        System.out.println("Rahul");
+    }
+}
+class Marks extends Student {
+    void displayMarks() {
+        System.out.println("Marks: 90");
+    }
+}
+class Main {
+    public static void main(String[] args) {
+        Marks m = new Marks();
+        m.schoolName();
+        m.studentName();
+        m.displayMarks();
+    }
+}
+
+7
+// HIERARCHICAL INHERITANCE
+class Employee {
+    void company() {
+        System.out.println("TCS");
+    }
+}
+class Developer extends Employee {
+    void coding() {
+        System.out.println("Writing Code");
+    }
+}
+class Tester extends Employee {
+    void testing() {
+        System.out.println("Testing Software");
+    }
+}
+class Main {
+    public static void main(String[] args) {
+        Developer d = new Developer();
+        d.company();
+        d.coding();
+        Tester t = new Tester();
+        t.company();
+        t.testing();
+    }
+}
+
+8
+// INHERITANCE WITH VARIABLES
+class Father {
+    int money = 10000;
+    void displayFather() {
+        System.out.println("Father Money: " + money);
+    }
+}
+class Son extends Father {
+    int diamond = 5000;
+    void displaySon() {
+        System.out.println("Son Diamond: " + diamond);
+    }
+}
+class Main {
+    public static void main(String[] args) {
+        Son s = new Son();
+        s.displayFather();
+        s.displaySon();
+        System.out.println("Father Money: " + s.money);
+        System.out.println("Son Diamond: " + s.diamond);
+    }
+}
+
+9
+// INHERITANCE WITH CONSTRUCTOR
+class Father {
+    Father() {
+        System.out.println("Father Constructor");
+    }
+    void property() {
+        System.out.println("House");
+    }
+}
+class Son extends Father {
+    Son() {
+        System.out.println("Son Constructor");
+    }
+    void bike() {
+        System.out.println("Bike");
+    }
+}
+class Main {
+    public static void main(String[] args) {
+        Son s = new Son();
+        s.property();
+        s.bike();
+    }
+}
+
+10
+// METHOD OVERRIDING
+class Father {
+    void property() {
+        System.out.println("Father Property");
+    }
+}
+class Son extends Father {
+    void property() {
+        System.out.println("Son Property");
+    }
+}
+class Main {
+    public static void main(String[] args) {
+        Son s = new Son();
+        s.property();
+    }
+}
