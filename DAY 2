@@ -1,0 +1,292 @@
+1
+import java.util.Scanner;
+
+public class PrintNumbers
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter N: ");
+        int n = sc.nextInt();
+
+        for (int i = 1; i <= n; i++)
+        {
+            System.out.print(i + " ");
+        }
+
+        sc.close();
+    }
+}
+2
+import java.util.Scanner;
+
+public class EvenNumbers
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter N: ");
+        int n = sc.nextInt();
+
+        for (int i = 1; i <= n; i++)
+        {
+            if (i % 2 != 0)
+            {
+                continue;
+            }
+
+            System.out.print(i + " ");
+        }
+
+        sc.close();
+    }
+}
+3
+import java.util.Scanner;
+
+public class SumNumbers
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter N: ");
+        int n = sc.nextInt();
+
+        int i = 1;
+        int sum = 0;
+
+        while (i <= n)
+        {
+            sum = sum + i;
+            i++;
+        }
+
+        System.out.println("Sum = " + sum);
+
+        sc.close();
+    }
+}
+4
+import java.util.Scanner;
+
+public class ReverseNumber
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter number: ");
+        int num = sc.nextInt();
+
+        int reverse = 0;
+
+        while (num != 0)
+        {
+            int digit = num % 10;
+
+            reverse = reverse * 10 + digit;
+
+            num = num / 10;
+        }
+
+        System.out.println("Reverse = " + reverse);
+
+        sc.close();
+    }
+}
+5
+import java.util.Scanner;
+
+public class CountDigits
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter number: ");
+        int num = sc.nextInt();
+
+        int count = 0;
+
+        if (num == 0)
+        {
+            count = 1;
+        }
+        else
+        {
+            while (num != 0)
+            {
+                num = num / 10;
+                count++;
+            }
+        }
+
+        System.out.println("Number of digits = " + count);
+
+        sc.close();
+    }
+}
+6
+import java.util.Scanner;
+
+public class MenuProgram
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+
+        do
+        {
+            System.out.println("\n----- MENU -----");
+            System.out.println("1. Add");
+            System.out.println("2. Subtract");
+            System.out.println("3. Multiply");
+            System.out.println("4. Exit");
+
+            System.out.print("Enter your choice: ");
+            int choice = sc.nextInt();
+
+            if (choice == 4)
+            {
+                System.out.println("Program ended");
+                break;
+            }
+
+            System.out.print("Enter first number: ");
+            int a = sc.nextInt();
+
+            System.out.print("Enter second number: ");
+            int b = sc.nextInt();
+
+            switch (choice)
+            {
+                case 1:
+                    System.out.println("Result = " + (a + b));
+                    break;
+
+                case 2:
+                    System.out.println("Result = " + (a - b));
+                    break;
+
+                case 3:
+                    System.out.println("Result = " + (a * b));
+                    break;
+
+                default:
+                    System.out.println("Invalid choice");
+            }
+
+        } while (true);
+
+        sc.close();
+    }
+}
+7
+import java.util.Scanner;
+
+public class BreakExample
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+
+        while (true)
+        {
+            System.out.print("Enter number: ");
+            int num = sc.nextInt();
+
+            if (num < 0)
+            {
+                System.out.println("Program stopped");
+                break;
+            }
+
+            if (num == 0)
+            {
+                continue;
+            }
+
+            System.out.println("Number = " + num);
+        }
+
+        sc.close();
+    }
+}
+8
+import java.util.Scanner;
+
+public class MultiplicationTables
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter number of tables: ");
+        int n = sc.nextInt();
+
+        for (int i = 1; i <= n; i++)
+        {
+            System.out.println("\nTable of " + i);
+
+            for (int j = 1; j <= 10; j++)
+            {
+                System.out.println(i + " x " + j + " = " + (i * j));
+            }
+        }
+
+        sc.close();
+    }
+}
+9
+import java.util.Scanner;
+
+public class StarPattern
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter number of rows: ");
+        int rows = sc.nextInt();
+
+        for (int i = 1; i <= rows; i++)
+        {
+            for (int j = 1; j <= i; j++)
+            {
+                System.out.print("*");
+            }
+
+            System.out.println();
+        }
+
+        sc.close();
+    }
+}
+10
+import java.util.Scanner;
+
+public class NumberPattern
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter number of rows: ");
+        int rows = sc.nextInt();
+
+        for (int i = 1; i <= rows; i++)
+        {
+            for (int j = 1; j <= i; j++)
+            {
+                System.out.print(j);
+            }
+
+            System.out.println();
+        }
+
+        sc.close();
+    }
+}
